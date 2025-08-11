@@ -1,0 +1,427 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F9F0E3;
+    overflow-x: hidden;
+}
+main {
+    align-self: flex-start;
+    width: 100%;
+}
+
+body #header {
+    align-self: stretch;
+    z-index: 25;
+}
+#header{
+    background: #8da683;
+    z-index: 10;
+    position: relative;
+}
+#header::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    pointer-events: none;
+    z-index: -1;
+}
+#navbarRoot{
+    position: relative;
+    z-index: 2;
+    container-type: inline-size;
+}
+#navbar
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navbar a {
+    text-decoration: none;
+}
+#nav-left {
+    flex: 0 0 auto;
+    padding: .75rem;
+    padding-left: 3rem;
+}
+#logo{
+    height: 3rem;
+    width: auto;
+}
+
+
+
+#otherPages{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.navItems{
+    white-space: nowrap;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fffdfa;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor:pointer;
+    text-decoration: none;
+    padding: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; 
+}
+.navItems:hover{
+    color: whitesmoke;
+    transition: color .4s ease;
+}
+
+
+
+.episodesText {
+    padding-top: 2rem;
+    text-align: center;
+    align-self: flex-start;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+#storyContainer {
+    position: relative;
+    width: 80vw;        
+    max-width: 1000px;
+    margin: auto;
+    background-image: url('images/woodenFrame.png');
+    background-size: contain;      
+    background-repeat: no-repeat;  
+    background-size: 100% 100%;   
+    padding: 5vw;                 
+    box-sizing: border-box;
+}
+
+#storyText{
+    width: 90%;
+    color: black; 
+    font-size: 1.3em; 
+    font-family: 'Gill Sans', serif;
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 2em;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+
+
+.aboutUsSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 1rem;
+}
+.bookCard {
+    position: relative;
+    width: 350px;
+}
+.aboutCard {
+    background: #fffdf8;
+    border: 1px solid #d8ccc1;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow:
+        2px 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 1px #f8f1e9;
+    font-family: 'Gill Sans', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.aboutCard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 40px solid #e8dccc;
+    border-left: 40px solid transparent;
+    border-radius: 0 12px 0 0;
+}
+
+.aboutCard h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #473c36;
+    margin-bottom: 0.5rem;
+}
+.title{
+    text-align: center;
+}
+.aboutCard p {
+    font-size: 1rem;
+    color: #5a4a3c;
+    line-height: 1.4;
+    margin-bottom: -0.1rem;
+}
+.bioImageContainer{     
+    height: 300px;   
+    overflow: hidden;
+    position: relative;
+}
+.bioImageContainerEdit{     
+    height: 230px;   
+    overflow: hidden;
+    position: relative;
+}
+.aarjavImg{
+    width: 100%;
+    transform: translateY(-25%);
+    pointer-events: none;
+    user-select: none;
+}
+.saraImg{
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+.keeanaImg{
+    width: 100%;
+    transform: translateY(-8%);
+    pointer-events: none;
+    user-select: none;
+}
+.aboutCard:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        4px 8px 16px rgba(0, 0, 0, 0.15), 
+        inset 0 0 0 1px #f8f1e9;
+}
+
+.bookCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color:rgba(27, 27, 27, 1);
+    border: 3px solid rgba(255, 255, 255, 0.155); 
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Gill Sans', serif;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transform-origin: left center;
+    animation: openOneCover 1.5s ease forwards;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.4),
+        inset 0 0 10px rgba(255, 255, 255, 0.04),
+        0 4px 10px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+}
+
+@keyframes openOneCover {
+    0% 
+    {
+        transform: rotateY(0deg);
+    }
+    100% 
+    {
+        transform: rotateY(-150deg);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+    #navbar {
+        flex-direction: column;
+        gap: 1rem;
+  }
+}
+
+@media (max-width: 1120px) {
+#otherPages {
+    position: static; 
+    transform: none;  
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+.navItems{
+    white-space: nowrap;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fffdfa;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor:pointer;
+    text-decoration: none;
+    padding: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; 
+}
+}
+
+@media (max-width: 820px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  #otherPages {
+    position: static; 
+    transform: none;  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  a.navItems {
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  #nav-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: -1rem;     
+  }
+}
+@media (max-width: 600px) {
+  .ctaBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 882px) {
+    #storyContainer 
+    {
+        width: 90vw;
+    }
+    #storyText
+    {
+        padding-left: 1.5em;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+
+@media (max-width: 630px) {
+    #storyContainer 
+    {
+        width: 90vw;
+    }
+    #storyText
+    {
+        padding-left: 1.2em;
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+    }
+}
+
+@media (max-width: 570px) {
+    #storyContainer 
+    {
+        width: 90vw;
+    }
+    #storyText
+    {
+        padding-left: 1.2em;
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+    }
+}
+
+@media (max-width: 530px) {
+    #storyContainer 
+    {
+        width: 90vw;
+    }
+    #storyText
+    {
+        padding-left: 1.2em;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+}
+@media (max-width: 470px) {
+    #storyContainer 
+    {
+        width: 90vw;
+    }
+    #storyText
+    {
+        padding-left: 1em;
+        padding-top: 12vh;
+        padding-bottom: 12vh;
+    }
+    .bioImageContainer{
+        height: 230px;
+    }
+    #storyContainer{
+        background-image: url('images/transCroppedWoodenFrame.png');
+        position: relative;
+        width: 99.8%;        
+        max-width: 10000px;
+        margin-left: .1%;
+        margin-right: .1%;
+        background-size: contain;      
+        background-repeat: no-repeat;  
+        background-size: 100% 100%;   /* center it */
+        padding: 1vw;                 /* creates spacing inside the frame */
+        box-sizing: border-box;
+    }
+    #storyText{
+        width: 72%;
+        color: black; 
+        font-size: 1.1em; 
+        font-family: 'Gill Sans', serif;
+        text-align: left;
+        line-height: 1.5;
+        padding-left: 2.3em;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+}

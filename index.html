@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Verses & Vibes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon"  href="images/squareSimpleClipArtVersesAndVibesIcon.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/c453ab086d.js" crossorigin="anonymous"></script>
+        <style>
+            /* Mobile Test */
+            @media (max-width: 480px) {
+            .ctaBookmark {
+                background-color: #8da683 !important;
+                width: 95% !important;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div id="navbarRoot">
+                <nav id="navbar">
+                    <div id="nav-left">
+                    <a href="/">
+                        <img id="logo" src="images/croppedVersesAndVibesLogo1.png">
+                    </a>
+                    </div>
+                    <div id="otherPages">
+                        <a href="aboutus.html" rel="noopener noreferrer" class="navItems">
+                            About Us
+                        </a>
+                        <a href="poetry.html" rel="noopener noreferrer" class="navItems">
+                            Poetry Club
+                        </a>
+                        <a href="events.html" rel="noopener noreferrer" class="navItems">
+                           Events
+                        </a>
+                        <a href="gettinginvolved.html" rel="noopener noreferrer" class="navItems">
+                           Getting Involved
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        <main>
+            <div class="latestVidRoot"> 
+                <div class="latestVidContainer">
+                    <!-- <video id="videoPlayer" width="640" height="360" controls autoplay></video> <!-->
+                    <img class="imgOverlay" src="images/overlayBg.webp">
+                </div>
+                <div class="vhsOverlay"></div>
+                <div id="innerText">
+                    <h2>Welcome to Verses & Vibes!</h2>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="profileContainer">
+                <div class="profile lleft">
+                    <div class="verticalBannerContainer">
+                        <div class="banner">
+                            <img src="images/bookBanner.png" alt="Poetry">
+                        </div>
+                        <div class="banner">
+                           <img src="images/communityServiceBanner.png" alt="Community Service">
+                        </div>
+                        <div class="banner">
+                            <img src="images/donationBanner.png" alt="Donating">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile rright">
+                    <div class="content">
+                        <h2>Mission Statement</h2>
+                        <br>
+                        <p>
+                            To empower communities through creative expression and compassionate service by supporting poetry programs and providing aid to individuals experiencing homelessness.
+                        </p>
+                        <br>
+                        <p>
+                           At&nbsp;Verses & Vibes, LLC, our purpose is to uplift and support the most vulnerable members of our community—seniors in old age homes and individuals experiencing homelessness. We are also dedicated to empowering underprivileged youth through education, mentorship, and support. We are committed to providing compassion, dignity, and essential resources through hands-on community service, advocacy, and outreach programs. By bridging generational and social gaps, we strive to create a more inclusive, caring, and empowered society where everyone has the opportunity to live with respect and hope.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notebookWrapper">
+               
+                <section class="ctaBookmark">
+                    <h2>Get Involved</h2>
+                    <p class="ctaSubtitle">Make a difference with your time, support, or presence.</p>
+                    <div class="ctaButtons">
+                        <a href="gettinginvolved.html" class="ctaBtn join">Join the Club</a>
+        
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8mdytLcVg4A0CcpbsSKopoVB-o66Owup4KMGuk2p_pztPfQ/viewform" target="_blank" rel="noopener noreferrer" class="ctaBtn volunteer">Volunteer</a>
+                    </div>
+                </section>
+                 <div class="notebookContainer">
+                    <img src="images/CRISPNEWnotebookPaper.png">
+                </div>
+            </div>
+            
+
+
+
+
+
+
+
+        </main>
+        <script>
+            function scrollSlider(direction) 
+            {
+                const slider = document.getElementById('imageSlider');
+                const scrollAmount = 320; // adjust based on image width + gap
+                slider.scrollBy
+                ({
+                    left: direction * scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+            
+            const videoList = 
+            [
+                'videos/2DpoetryReading.mp4',
+                'videos/cinematicPoetryReading.mp4',
+                'videos/realisticPoetryReading.mp4'
+            ];
+
+            const videoPlayer = document.getElementById('videoPlayer');
+            let currentIndex = 0;
+
+            function playVideo(index) 
+            {
+                if (index < videoList.length) 
+                {
+                    videoPlayer.src = videoList[index];
+                    videoPlayer.play();
+                }
+            }
+
+            videoPlayer.addEventListener('ended', () => 
+            {
+                currentIndex++;
+                if 
+                (currentIndex < videoList.length) 
+                {
+                    playVideo(currentIndex);
+                } 
+                else 
+                {
+                    console.log("All videos finished.");
+                }
+            });
+
+            // Start first video
+            playVideo(currentIndex);
+        </script>
+    </body>
+</html>

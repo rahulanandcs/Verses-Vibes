@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Verses & Vibes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon"  href="images/squareSimpleClipArtVersesAndVibesIcon.png">
+        <link rel="stylesheet" href="style3.css">
+        <script src="https://kit.fontawesome.com/c453ab086d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header id="header">
+            <div id="navbarRoot">
+                <nav id="navbar">
+                    <div id="nav-left">
+                    <a href="/">
+                        <img id="logo" src="images/croppedVersesAndVibesLogo1.png">
+                    </a>
+                    </div>
+                    <div id="otherPages">
+                        <a href="aboutus.html" rel="noopener noreferrer" class="navItems">
+                            About Us
+                        </a>
+                        <a href="poetry.html" rel="noopener noreferrer" class="navItems">
+                            Poetry Club
+                        </a>
+                        <a href="events.html" rel="noopener noreferrer" class="navItems">
+                           Events
+                        </a>
+                        <a href="gettinginvolved.html" rel="noopener noreferrer" class="navItems">
+                           Getting Involved
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <p class="episodesText" id="typingEffect">Schedule:</p>
+
+            <div id="meetingAnimationContainer">
+                <div id="meeting-question-container">
+                    <span id="meeting-question"></span>
+                </div>
+                <div id="step2" class="animation-step">
+                    <img src="images/transSatCalendar.png">
+                </div>
+                <div id="step3" class="animation-step">
+                    <div class="digital-clock">
+                        <span class="digital-text">2:00 PM – 3:00 PM</span>
+                    </div>
+                </div>
+                <div id="calendarSticker" class="calendar-note final-calendar">
+                    <div class="flame-emoji">🔥</div>
+                    <div class="sticky-note">
+                        <h4>🗓️ Weekly Meet-Up</h4>
+                        <p><strong>Where:</strong> Library at Cinco Ranch Senior Living Facility Library<br>
+                        <strong>When:</strong> Saturdays, 2–3 p.m.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            
+            <p class="episodesText" id="featuredPoemHeader">Featured Poems</p>
+
+
+
+            <div class="poemGrid">
+                <div class="poem-card" onclick="openPoem('poem1')">
+                    <p>"Where Words Go to Heal"</p>
+                    <p class="poet-name">– Ria Metha</p>
+                </div>
+
+                <div id="poem1" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem1')">✕</button>
+                        <h2>Where Words Go to Heal</h2>
+                        <p>
+                            Words dance softly in the air,<br>
+                            Carried by thoughts too deep to share.<br>
+                            A whisper turned to ink and light,<br>
+                            A hush of truth in darkest night.<br>
+                            Verses ripple in the soul,<br>
+                            Binding broken parts to whole.<br>
+                            What can’t be said finds silent grace,<br>
+                            In poetry’s warm, endless space.
+                        </p>
+                        <p class="poet-name">– Ria Metha</p>
+                    </div>
+                </div>
+
+                <div class="poem-card" onclick="openPoem('poem2')">
+                    <p>"The Earth Whispers Back"</p>
+                    <p class="poet-name">– Arjun Verma</p>
+                </div>
+
+                <div id="poem2" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem2')">✕</button>
+                        <h2>The Earth Whispers Back</h2>
+                        <p>
+                            The river hums a quiet tune,<br>
+                            Beneath the sun, beneath the moon.<br>
+                            Leaves applaud the morning breeze,<br>
+                            Roots hold secrets under trees.<br>
+                            Petals bow to drops of rain,<br>
+                            Mountains echo joy and pain.<br>
+                            Nature sings with voice so wide,<br>
+                            In every stone, the earth confides.
+                        </p>
+                        <p class="poet-name">– Arjun Verma</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem3')">
+                    <p>"The Weight of Time"</p>
+                    <p class="poet-name">– Lian Zhang</p>
+                </div>
+
+                <div id="poem3" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem3')">✕</button>
+                        <h2>The Weight of Time</h2>
+                        <p>
+                            Silver threads in weathered hair,<br>
+                            A gaze that’s seen the world laid bare.<br>
+                            Hands that tremble, soft with time,<br>
+                            Still cradle dreams and verses rhyme.<br>
+                            Footsteps slow, but hearts still race,<br>
+                            Through memories they can’t replace.<br>
+                            A lifetime held in laugh and sigh,<br>
+                            Old age, a truth you can't deny.
+                        </p>
+                        <p class="poet-name">– Lian Zhang</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem4')">
+                    <p>"Tail of Truth"</p>
+                    <p class="poet-name">– Hana Kim</p>
+                </div>
+
+                <div id="poem4" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem4')">✕</button>
+                        <h2>Tail of Truth</h2>
+                        <p>
+                            A wagging tail, a loyal heart,<br>
+                            A friend who loves from end to start.<br>
+                            No judgment passed, no grudge to keep,<br>
+                            They guard your soul while you're asleep.<br>
+                            In muddy paws and eager eyes,<br>
+                            A quiet kind of wisdom lies.<br>
+                            They teach us joy, and how to stay—<br>
+                            Present in the smallest day.
+                        </p>
+                        <p class="poet-name">– Hana Kim</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem5')">
+                    <p>"Loops of Love"</p>
+                    <p class="poet-name">– Ava Tran</p>
+                </div>
+
+                <div id="poem5" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem5')">✕</button>
+                        <h2>Loops of Love</h2>
+                        <p>
+                            With every loop, a story spun,<br>
+                            Of warmth and care for everyone.<br>
+                            A clack of needles, steady beat,<br>
+                            A blanket soft, a gift complete.<br>
+                            Threads entwine like hearts that know,<br>
+                            Love is stitched in every row.<br>
+                            In patient craft, the hands reveal<br>
+                            The quiet art of how we feel.
+                        </p>
+                        <p class="poet-name">– Ava Tran</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <button class="reveal-button" id="revealBtn2">Want to see More?</button>
+            <button class="close-button hidden" id="closeBtn2">Close</button>
+
+
+
+
+
+            <div class="poem-grid" id="grid2">
+                <div class="poem-card" onclick="openPoem('poem6')">
+                    <p>"Ovenlight and Memory"</p>
+                    <p class="poet-name">– Rohan Sharma</p>
+                </div>
+
+                <div id="poem6" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem6')">✕</button>
+                        <h2>Ovenlight and Memory</h2>
+                        <p>
+                            Flour clouds and cinnamon air,<br>
+                            Butter melting into care.<br>
+                            Dough that rises, soft and slow,<br>
+                            Love beneath each golden glow.<br>
+                            Measuring more than cups and grams,<br>
+                            A recipe of hearts and hands.<br>
+                            In baking, moments sweetly blend,<br>
+                            And warmth is something we can send.
+                        </p>
+                        <p class="poet-name">– Rohan Sharma</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem7')">
+                    <p>"Becoming Quietly"</p>
+                    <p class="poet-name">– Yuto Takahashi</p>
+                </div>
+
+                <div id="poem7" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem7')">✕</button>
+                        <h2>Becoming Quietly</h2>
+                        <p>
+                            Not all growth is seen in height,<br>
+                            But in the way we choose what's right.<br>
+                            Through cracked ground, the green will grow,<br>
+                            A sign of strength we rarely show.<br>
+                            Each stumble carves a wiser path,<br>
+                            Each tear may birth a quiet laugh.<br>
+                            We bloom in pain, in joy, in strife—<br>
+                            Becoming more with every life.
+                        </p>
+                        <p class="poet-name">– Yuto Takahashi</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem8')">
+                    <p>"Backyard Galaxies"</p>
+                    <p class="poet-name">– Meera Iyer</p>
+                </div>
+
+                <div id="poem8" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem8')">✕</button>
+                        <h2>Backyard Galaxies</h2>
+                        <p>
+                            Sticky hands and wild delight,<br>
+                            Chasing stars on summer night.<br>
+                            Questions tumbling, minds so wide,<br>
+                            Imagining the world outside.<br>
+                            Giggles echo through the day,<br>
+                            In their joy, all fears decay.<br>
+                            Children teach us how to be—<br>
+                            Present, bright, and truly free.
+                        </p>
+                        <p class="poet-name">– Meera Iyer</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem9')">
+                    <p>"Ink Between the Lines"</p>
+                    <p class="poet-name">– Devanshi Patel</p>
+                </div>
+
+                <div id="poem9" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem9')">✕</button>
+                        <h2>Ink Between the Lines</h2>
+                        <p>
+                            A poem is a breath made whole,<br>
+                            A mirror of the searching soul.<br>
+                            Not bound by grammar, tense, or rhyme,<br>
+                            It stretches past the edge of time.<br>
+                            With ink it paints the silent screams,<br>
+                            Or weaves the hush of midnight dreams.<br>
+                            It listens more than it declares—<br>
+                            A quiet friend that always cares.
+                        </p>
+                        <p class="poet-name">– Devanshi Patel</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem10')">
+                    <p>"Language Older Than Words"</p>
+                    <p class="poet-name">– Owen Carter</p>
+                </div>
+
+                <div id="poem10" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem10')">✕</button>
+                        <h2>A Language Older Than Words</h2>
+                        <p>
+                            Rain taps gently on the glass,<br>
+                            As winds go dancing through the grass.<br>
+                            The earth beneath begins to hum,<br>
+                            A lullaby for what's to come.<br>
+                            In stillness lies the loudest grace,<br>
+                            In shadows, too, the sunlight's face.<br>
+                            Nature doesn’t rush or race—<br>
+                            She teaches all in her embrace.
+                        </p>
+                        <p class="poet-name">– Owen Carter</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem11')">
+                    <p>"Embers Still Glow"</p>
+                    <p class="poet-name">– Tanvi Joshi</p>
+                </div>
+
+                <div id="poem11" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem11')">✕</button>
+                        <h2>Embers Still Glow</h2>
+                        <p>
+                            Each wrinkle holds a tale to tell,<br>
+                            Of battles fought and moments well.<br>
+                            A slower gait, a gentler tone,<br>
+                            Yet never truly all alone.<br>
+                            Memories bloom behind the eyes,<br>
+                            Like springtime after winter skies.<br>
+                            Old age is not a closing door—<br>
+                            It’s just a softer kind of more.
+                        </p>
+                        <p class="poet-name">– Tanvi Joshi</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem12')">
+                    <p>"Eyes That Know"</p>
+                    <p class="poet-name">– Saanvi Kulkarni</p>
+                </div>
+
+                <div id="poem12" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem12')">✕</button>
+                        <h2>Eyes That Know</h2>
+                        <p>
+                            They chase the world with simple glee,<br>
+                            Content with just your company.<br>
+                            Ears that perk at every sound,<br>
+                            Hearts that love you safe and round.<br>
+                            They ask for little, give so much,<br>
+                            In every lick, a loving touch.<br>
+                            No truer friend you’ll ever find,<br>
+                            Than one with tail and faithful mind.
+                        </p>
+                        <p class="poet-name">– Saanvi Kulkarni</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem13')">
+                    <p>"Thread by Thread”</p>
+                    <p class="poet-name">– Priya Choudhury</p>
+                </div>
+
+                <div id="poem13" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem13')">✕</button>
+                        <h2>Thread by Thread</h2>
+                        <p>
+                            Colors chosen, patterns bloom,<br>
+                            Wool like whispers fills the room.<br>
+                            Stitch by stitch the minutes go,<br>
+                            Binding time in gentle flow.<br>
+                            Each mistake, a little flare—<br>
+                            Proof that love is always there.<br>
+                            Knitting warms what words can't mend,<br>
+                            Threaded comfort without end.
+                        </p>
+                        <p class="poet-name">– Priya Choudhury</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem14')">
+                    <p>"Flour-Dusted Love"</p>
+                    <p class="poet-name">– Min-Jae Park</p>
+                </div>
+
+                <div id="poem14" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem14')">✕</button>
+                        <h2>Flour-Dusted Love</h2>
+                        <p>
+                            Crusts that crackle, jam that gleams,<br>
+                            Pastries folded out of dreams.<br>
+                            Ovens ticking like a song,<br>
+                            Where time and patience both belong.<br>
+                            The scent of sugar, brown and bold,<br>
+                            A memory baked, a story told.<br>
+                            For every pie and every bun,<br>
+                            Is joy that rises with the sun.
+                        </p>
+                        <p class="poet-name">– Min-Jae Park</p>
+                    </div>
+                </div>
+
+
+                <div class="poem-card" onclick="openPoem('poem15')">
+                    <p>"Through the Cracks"</p>
+                    <p class="poet-name">– Anupa Srinivas</p>
+                </div>
+
+                <div id="poem15" class="poem-modal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closePoem('poem15')">✕</button>
+                        <h2>Through the Cracks</h2>
+                        <p>
+                            You may not notice when it starts—<br>
+                            The soft reshaping of your heart.<br>
+                            The way you choose a kinder tone,<br>
+                            Or learn to stand your ground alone.<br>
+                            Growth is quiet, never loud,<br>
+                            Like roots beneath the frozen ground.<br>
+                            One day you’ll turn, and you will see—<br>
+                            You’ve bloomed into who you should be.
+                        </p>
+                        <p class="poet-name">– Anupa Srinivas</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <p class="episodesText" id="featuredArtHeader">Featured Art</p>
+
+
+
+            <div class="imageGrid">
+                <a>
+                    <div class="imageItem">
+                        <img src="images/japaneseDojo.jpg" alt="Image 1">
+                        <div class="imageMeta">
+                            <p class="title">"Pink Japanese Dojo""</p>
+                            <p class="date">July 1, 2025</p>
+                        </div>
+                    </div>
+                </a>
+                <a>
+                    <div class="imageItem">
+                        <img src="images/libraryRiver1.jpg" alt="Image 2">
+                        <div class="imageMeta">
+                            <p class="title">"Riverside Library"</p>
+                            <p class="date">June 21, 2025</p>
+                        </div>
+                    </div>
+                </a>
+                <a>
+                    <div class="imageItem">
+                        <img src="images/saturatedLandscape1.jpg" alt="Image 3">
+                        <div class="imageMeta">
+                            <p class="title">"Cloudy Prarie"</p>
+                            <p class="date">June 13, 2025</p>
+                        </div>
+                    </div>
+                </a>
+                <a>
+                    <div class="imageItem">
+                        <img src="images/watercolorDog.jpg" alt="Image 4">
+                        <div class="imageMeta">
+                            <p class="title">"Colorsplash Doggy"</p>
+                            <p class="date">June 23, 2025</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <button class="reveal-button" id="revealBtn">Want to see More?</button>
+            <button class="close-button hidden" id="closeBtn">Close</button>
+
+            <div class="image-grid" id="grid">
+                <img src="images/coolDesk.jpg" alt="img1">
+                <img src="images/autumnRoom.jpg" alt="img2">
+                <img src="images/goldenMonkey.jpg" alt="img3">
+                <img src="images/vibrantCity.jpg" alt="img4">
+                <img src="images/pastelFeather.jpg" alt="img5">
+                <img src="images/grayFlyingBook.jpg" alt="img6">
+                <img src="images/splashyRose.jpg" alt="img7">
+                <img src="images/heartHandBook.jpg" alt="img8">
+                <img src="images/inkBottleGalaxy.jpg" alt="img9">
+                <img src="images/colorfulButterfly.jpg" alt="img10">
+                <img src="images/pastelCrochet.jpg" alt="img11">
+                <img src="images/moonBoy.jpg" alt="img12">
+                <img src="images/paperLayerTrees.jpg" alt="img13">
+                <img src="images/boyColorStorm.jpg" alt="img14">
+                <img src="images/candleBook.jpg" alt="img15">
+                <img src="images/bookMachine.jpg" alt="img16">
+            </div>
+
+
+
+
+
+            <div class="ctaSideTab collapsed" id="ctaSideTab">
+                <div class="arrow">&#x25B6;</div>
+                <div class="ctaSideContent">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScxlc5oWVeJJE8Jr3HwhPyGWLebR9vjK_Y55lJxnuIqREFt7w/viewform" target="_blank" rel="noopener noreferrer" class="ctaSideBtn">Poetry Submisison</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScxlc5oWVeJJE8Jr3HwhPyGWLebR9vjK_Y55lJxnuIqREFt7w/viewform" target="_blank" rel="noopener noreferrer" class="ctaSideBtn">Art Submission</a>
+                </div>
+            </div>
+
+
+
+        </main>
+       <script>
+            window.addEventListener('DOMContentLoaded', () => {
+            const textEl = document.getElementById("meeting-question");
+            const cursorEl = document.getElementById("cursor");
+            const question = "When are the meetings?";
+
+            const step1 = document.getElementById('step1');
+            const step2 = document.getElementById('step2');
+            const step3 = document.getElementById('step3');
+            const calendarSticker = document.getElementById('calendarSticker');
+
+            let index = 0;
+            let isDeleting = false;
+
+            function animateQuestion() {
+            if (!isDeleting) {
+                textEl.textContent = question.slice(0, index++);
+                if (index > question.length) {
+                    isDeleting = true;
+                    setTimeout(animateQuestion, 1000); // pause before deleting
+                    return;
+                }
+            } else {
+                textEl.textContent = question.slice(0, index--);
+                if (index < 0) {
+                    // ✅ Remove blinking cursor by disabling ::after
+                    textEl.style.setProperty('--hide-cursor', 'true');
+
+                    // ✅ Hide the text element after deletion
+                    textEl.style.display = 'none';
+                    
+                    const wrapper = document.getElementById("meeting-question-container");
+                    wrapper.style.marginBottom = "0";
+
+                    // Trigger the rest
+                    triggerNextSteps();
+                    return;
+                }
+            }
+            setTimeout(animateQuestion, isDeleting ? 50 : 100);
+        }
+
+
+            function triggerNextSteps() {
+                // Step 2 (calendar)
+                step2.classList.add("visible");
+
+                setTimeout(() => {
+                step2.classList.add("exiting");
+
+                // Step 3 (alarm)
+                setTimeout(() => {
+                step2.classList.remove("visible", "exiting");
+                step3.classList.add("visible");
+
+                setTimeout(() => {
+                    step3.classList.add("exiting");
+
+                    setTimeout(() => {
+                    step3.classList.remove("visible", "exiting");
+
+                    // Show calendar sticker
+                    calendarSticker.classList.add("visible");
+                    }, 1000); // Exit duration
+                }, 4000); // Show alarm duration
+                }, 1000); // Delay between exit and next
+            }, 4000); // Show calendar duration
+            }
+
+
+            // Start animation
+            animateQuestion();
+        });
+
+
+
+        // Reveal/hide button logic
+            const revealBtn = document.getElementById("revealBtn");
+            const closeBtn = document.getElementById("closeBtn");
+            const grid = document.getElementById("grid");
+
+            const revealBtn2 = document.getElementById("revealBtn2");
+            const closeBt2 = document.getElementById("closeBtn2");
+            const grid2 = document.getElementById("grid2");
+            
+
+            revealBtn.addEventListener("click", () => {
+                grid.classList.add("show");
+                revealBtn.classList.add("hidden");
+                closeBtn.classList.remove("hidden");
+            });
+
+            closeBtn.addEventListener("click", () => {
+                grid.classList.remove("show");
+                closeBtn.classList.add("hidden");
+                revealBtn.classList.remove("hidden");
+            });
+
+            revealBtn2.addEventListener("click", () => {
+                grid2.classList.add("show");
+                revealBtn2.classList.add("hidden");
+                closeBtn2.classList.remove("hidden");
+            });
+
+            closeBtn2.addEventListener("click", () => {
+                grid2.classList.remove("show");
+                closeBtn2.classList.add("hidden");
+                revealBtn2.classList.remove("hidden");
+            });
+
+
+            function openPoem(id) 
+            {
+                document.getElementById(id).style.display = 'flex';
+            }
+
+            function closePoem(id) 
+            {
+                document.getElementById(id).style.display = 'none';
+            }
+
+
+
+            const ctaSideTab = document.getElementById('ctaSideTab');
+            ctaSideTab.addEventListener('click', (e) => {
+                // Prevent toggling if clicking a link inside
+                if(e.target.tagName.toLowerCase() === 'a') return;
+
+                ctaSideTab.classList.toggle('collapsed');
+                ctaSideTab.classList.toggle('expanded');
+            });
+        </script>
+    </body>
+</html>
+
+          

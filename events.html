@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Verses & Vibes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon"  href="images/squareSimpleClipArtVersesAndVibesIcon.png">
+        <link rel="stylesheet" href="style4.css">
+        <script src="https://kit.fontawesome.com/c453ab086d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header id="header">
+            <div id="navbarRoot">
+                <nav id="navbar">
+                    <div id="nav-left">
+                    <a href="/">
+                        <img id="logo" src="images/croppedVersesAndVibesLogo1.png">
+                    </a>
+                    </div>
+                    <div id="otherPages">
+                        <a href="aboutus.html" rel="noopener noreferrer" class="navItems">
+                            About Us
+                        </a>
+                        <a href="poetry.html" rel="noopener noreferrer" class="navItems">
+                            Poetry Club
+                        </a>
+                        <a href="events.html" rel="noopener noreferrer" class="navItems">
+                           Events
+                        </a>
+                        <a href="gettinginvolved.html" rel="noopener noreferrer" class="navItems">
+                           Getting Involved
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <button onclick="changeMonth(-1)">←</button>
+                    <h2 id="calendar-title"></h2>
+                    <button onclick="changeMonth(1)">→</button>
+                </div>
+                <div class="calendar-grid" id="calendar-grid"> <!-- Grid will be filled dynamically --> </div>
+
+                <div id="announcement-box" class="announcement-box hidden"></div>
+            </div>
+        </main>
+
+
+
+        <script>
+            const calendarTitle = document.getElementById("calendar-title");
+            const calendarGrid = document.getElementById("calendar-grid");
+            const announcementBox = document.getElementById("announcement-box");
+
+            // Example announcements
+            const announcements = {
+                "2025-08-09": "📚 Poetry Workshop!",
+                "2025-08-16": "🎨 Artist Showcase!",
+                "2025-08-23": "✏️ Creative Writing!",
+                "2025-08-30": "📚 Poetry Workshop!",
+                "2025-09-06": "📚 Poetry Workshop!",
+                "2025-09-13": "🎨 Artist Showcase!",
+                "2025-09-20": "✏️ Creative Writing!",
+                "2025-09-27": "📚 Poetry Workshop!"
+            };
+
+            let currentDate = new Date();
+
+            function renderCalendar(date = new Date()) {
+                calendarGrid.innerHTML = "";
+                const year = date.getFullYear();
+                const month = date.getMonth();
+
+                const firstDay = new Date(year, month, 1);
+                const startDay = firstDay.getDay(); // Sunday = 0
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+                weekdays.forEach(day => {
+                const label = document.createElement("div");
+                label.className = "day-label";
+                label.textContent = day;
+                calendarGrid.appendChild(label);
+                });
+
+                for (let i = 0; i < startDay; i++) {
+                const empty = document.createElement("div");
+                empty.className = "empty-cell";
+                calendarGrid.appendChild(empty);
+                }
+
+                for (let d = 1; d <= daysInMonth; d++) {
+                const current = new Date(year, month, d);
+                const dayCell = document.createElement("div");
+                dayCell.className = "day-cell";
+                dayCell.textContent = d;
+
+                if (current.getDay() === 6) { // Saturday
+                    dayCell.classList.add("saturday");
+                    const dateKey = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+                    dayCell.onclick = () => showAnnouncement(dateKey);
+                }
+
+                calendarGrid.appendChild(dayCell);
+                }
+
+                calendarTitle.textContent = `${date.toLocaleString("default", { month: "long" })} ${year}`;
+            }
+
+            function changeMonth(offset) {
+                currentDate.setMonth(currentDate.getMonth() + offset);
+                renderCalendar(currentDate);
+                announcementBox.classList.add("hidden"); // Hide box on month change
+            }
+
+            function showAnnouncement(dateKey) {
+                if (announcements[dateKey]) {
+                announcementBox.textContent = announcements[dateKey];
+                announcementBox.classList.remove("hidden");
+                } else {
+                announcementBox.textContent = "📅 No events for this Saturday.";
+                announcementBox.classList.remove("hidden");
+                }
+            }
+
+            // Initialize
+            renderCalendar();
+
+
+
+            function showAnnouncement(dateKey) {
+                if (announcements[dateKey]) {
+                    announcementBox.textContent = announcements[dateKey];
+                    announcementBox.classList.remove("hidden");
+                } else {
+                    announcementBox.textContent = "📅 No events for this Saturday.";
+                    announcementBox.classList.remove("hidden");
+                }
+                
+                // Scroll into view on mobile
+                if (window.innerWidth <= 600) {
+                    announcementBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+
+
+        </script>
+    </body>
+</html>
+
+          
