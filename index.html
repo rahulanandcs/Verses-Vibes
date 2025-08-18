@@ -23,7 +23,7 @@
                 <nav id="navbar">
                     <div id="nav-left">
                     <a href="/">
-                        <img id="logo" src="images/croppedVersesAndVibesLogo1.png">
+                        <img id="logo" src="images/croppedVersesAndVibesLogo1.png" onclick="location.href='index.html';" alt="Verses & Vibes Logo">
                     </a>
                     </div>
                     <div id="otherPages">
@@ -117,6 +117,74 @@
 
         </main>
         <script>
+            // Image Protection JavaScript
+            
+            // Disable right-click context menu
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Disable drag and drop
+            document.addEventListener('dragstart', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Disable keyboard shortcuts for saving
+            document.addEventListener('keydown', function(e) {
+                // Disable Ctrl+S (Save)
+                if (e.ctrlKey && e.key === 's') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Disable Ctrl+A (Select All)
+                if (e.ctrlKey && e.key === 'a') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Disable F12 (Developer Tools)
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Disable Ctrl+Shift+I (Developer Tools)
+                if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Disable Ctrl+U (View Source)
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Disable text selection
+            document.onselectstart = function() {
+                return false;
+            };
+            
+            // Additional protection for images
+            const images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                img.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                });
+                
+                img.addEventListener('dragstart', function(e) {
+                    e.preventDefault();
+                });
+                
+                // Disable right-click specifically on images
+                img.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+            });
+
             function scrollSlider(direction) 
             {
                 const slider = document.getElementById('imageSlider');

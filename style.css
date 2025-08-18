@@ -6,6 +6,42 @@ body{
   background-color: #F9F0E3;
   overflow-x: hidden;
 }
+
+/* Image Protection Styles */
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+}
+
+/* Disable right-click context menu on images */
+img::-webkit-context-menu {
+  display: none;
+}
+
+/* Prevent text selection on the entire page */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection for specific elements where needed */
+p, h1, h2, h3, h4, h5, h6, span, div.content {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
 body #header {
   align-self: stretch;
   z-index: 25;
