@@ -41,6 +41,83 @@ p, h1, h2, h3, h4, h5, h6, span, div.content {
     -ms-user-select: text;
     user-select: text;
 }
+
+/* Enhanced Image Protection for About Us page */
+.aarjavImg, .saraImg, .keeanaImg {
+    /* Prevent image selection and dragging */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+    
+    /* Disable touch actions on mobile */
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Prevent highlighting */
+    -webkit-highlight: none;
+    
+    /* Disable image caching hint */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    
+    /* Add a subtle protection indicator */
+    filter: contrast(1.02);
+}
+
+/* Bio image containers protection */
+.bioImageContainer, .bioImageContainerEdit {
+    position: relative;
+    overflow: hidden;
+    /* Prevent selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* About cards protection */
+.aboutCard {
+    position: relative;
+    /* Disable text selection within cards to prevent accidental selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Re-enable text selection for readable content */
+.aboutCard h3,
+.aboutCard p {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* Print protection */
+@media print {
+    .aarjavImg, .saraImg, .keeanaImg {
+        display: none !important;
+    }
+    
+    .bioImageContainer, .bioImageContainerEdit {
+        display: none !important;
+    }
+    
+    .aboutCard::after {
+        content: "Images hidden for privacy protection";
+        display: block;
+        text-align: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 2px dashed #ccc;
+    }
+}
 main {
     align-self: flex-start;
     width: 100%;
