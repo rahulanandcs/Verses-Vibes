@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsB';
+  src: url('fonts/Poppins-Bold.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsSB';
+  src: url('fonts/Poppins-SemiBold.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsM';
+  src: url('fonts/Poppins-Medium.ttf');
+  font-style: normal;
+}
+
+
+
 body{
   margin: 0;
   display: flex;
@@ -62,7 +85,7 @@ body #header {
 }
 .navItems{
   white-space: nowrap;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
   color: #fffdfa;
   font-weight: bold;
   font-size: 1.2rem;
@@ -75,7 +98,7 @@ body #header {
   line-height: 1; /* prevent vertical jumpiness */
 }
 .navItems:hover{
-  color: whitesmoke;
+  color: rgb(234, 229, 229);
   transition: color .4s ease;
 }
 
@@ -123,7 +146,7 @@ body #header {
 
 h5, h2{
   margin: 0;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
   color: #fffdfa;
   color: inherit;
 }
@@ -142,7 +165,8 @@ h5, h2{
   margin-left: 2rem;
   font-size: 30px;
   font-weight: bold;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:'Nunito Sans', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  font-weight:870;
 }
 
 
@@ -228,14 +252,15 @@ h5, h2{
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.5;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+  font-family:'Nunito Sans', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  font-weight:700;
   color:#000;
   margin: 0;
 }
 .profile h2{
   font-size: 30px;
   font-weight: bold;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 
@@ -274,13 +299,13 @@ h5, h2{
 .ctaBookmark h2 {
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
-  font-family: 'Gill Sans', sans-serif;
+  font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 .ctaSubtitle {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  font-family: 'Gill Sans', sans-serif;
+  font-family:'PoppinsM', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
   opacity: 0.9;
 }
 
@@ -300,7 +325,7 @@ h5, h2{
   font-size: 1rem;
   font-weight: bold;
   transition: all 0.3s ease;
-  font-family: 'Gill Sans', sans-serif;
+  font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
   white-space: nowrap;
 }
 
@@ -358,9 +383,7 @@ h5, h2{
 @media (max-width: 900px) {
 .navItems{
   white-space: nowrap;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #fffdfa;
-  font-weight: bold;
   font-size: 1rem;
   cursor:pointer;
   text-decoration: none;
