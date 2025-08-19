@@ -79,7 +79,7 @@
                             <img src="images/aarjaccousin1.PNG" class="keeanaImg">
                         </div>
                         <h3>Keeana Desai</h3>
-                        <p class="title">Funder</p>
+                        <p class="title">Founder</p>
                         <p>Keeana Desai is an incoming 8th grader at Beckendorff Junior High. She started the Verses and Vibes Poetry Club along with her cousins in 7th grade. She has a passion for piano, and has won many certificates. She has excelled in academic competitions like Math and Science Team and Science Olympiad, and has won many medals in those competitions. Additionally, she likes to crochet, do art, sing, and likes to listen to kpop.</p>
                     </div>
                 </div>
@@ -92,6 +92,245 @@
             </section>
         </main>
         <script>
+            // Image Protection JavaScript
+            
+            // Disable right-click context menu
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Disable drag and drop
+            document.addEventListener('dragstart', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Disable keyboard shortcuts for saving
+            document.addEventListener('keydown', function(e) {
+                // Disable Ctrl+S (Save)
+                if (e.ctrlKey && e.key === 's') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Disable Ctrl+A (Select All)
+                if (e.ctrlKey && e.key === 'a') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Disable F12 (Developer Tools)
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Disable Ctrl+Shift+I (Developer Tools)
+                if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Disable Ctrl+U (View Source)
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Additional protection for images
+            const images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                img.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                });
+                
+                img.addEventListener('dragstart', function(e) {
+                    e.preventDefault();
+                });
+                
+                // Disable right-click specifically on images
+                img.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+            });
+
+            // Screenshot Protection
+            
+            // 1. Detect Print Screen key
+            document.addEventListener('keyup', function(e) {
+                if (e.key === 'PrintScreen') {
+                    alert('Screenshots are not allowed on this page for privacy protection.');
+                    // Clear clipboard
+                    navigator.clipboard.writeText('');
+                }
+            });
+
+            // 2. Detect common screenshot key combinations
+            document.addEventListener('keydown', function(e) {
+                // Windows: Windows + Shift + S (Snipping Tool)
+                if (e.metaKey && e.shiftKey && e.key === 'S') {
+                    e.preventDefault();
+                    alert('Screenshot tools are disabled on this page.');
+                    return false;
+                }
+                // Mac: Cmd + Shift + 3/4/5 (Screenshot shortcuts)
+                if (e.metaKey && e.shiftKey && (e.key === '3' || e.key === '4' || e.key === '5')) {
+                    e.preventDefault();
+                    alert('Screenshots are not allowed on this page.');
+                    return false;
+                }
+                // Alt + Print Screen
+                if (e.altKey && e.key === 'PrintScreen') {
+                    e.preventDefault();
+                    alert('Screenshots are not allowed on this page.');
+                    return false;
+                }
+            });
+
+            // 3. Hide images when page loses focus (user switches to another app)
+            let originalImageSources = [];
+            let imagesHidden = false;
+            
+            function hideImages() {
+                if (!imagesHidden) {
+                    const allImages = document.querySelectorAll('img');
+                    allImages.forEach(function(img, index) {
+                        originalImageSources[index] = img.src;
+                        img.style.opacity = '0';
+                        img.style.filter = 'blur(20px)';
+                    });
+                    imagesHidden = true;
+                }
+            }
+            
+            function showImages() {
+                if (imagesHidden) {
+                    const allImages = document.querySelectorAll('img');
+                    allImages.forEach(function(img, index) {
+                        img.style.opacity = '1';
+                        img.style.filter = 'none';
+                    });
+                    imagesHidden = false;
+                }
+            }
+            
+            // Hide images when page loses focus
+            window.addEventListener('blur', hideImages);
+            window.addEventListener('focus', showImages);
+            
+            // Hide images when user switches tabs
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    hideImages();
+                } else {
+                    showImages();
+                }
+            });
+
+            // 4. Add protective overlay on images
+            function addProtectiveOverlay() {
+                const aboutImages = document.querySelectorAll('.aarjavImg, .saraImg, .keeanaImg');
+                aboutImages.forEach(function(img) {
+                    // Create overlay
+                    const overlay = document.createElement('div');
+                    overlay.style.position = 'absolute';
+                    overlay.style.top = '0';
+                    overlay.style.left = '0';
+                    overlay.style.width = '100%';
+                    overlay.style.height = '100%';
+                    overlay.style.backgroundColor = 'transparent';
+                    overlay.style.zIndex = '10';
+                    overlay.style.pointerEvents = 'auto';
+                    overlay.style.userSelect = 'none';
+                    
+                    // Make parent container relative if not already
+                    const parent = img.parentElement;
+                    if (getComputedStyle(parent).position === 'static') {
+                        parent.style.position = 'relative';
+                    }
+                    
+                    // Add overlay to parent
+                    parent.appendChild(overlay);
+                    
+                    // Add event listeners to overlay
+                    overlay.addEventListener('contextmenu', function(e) {
+                        e.preventDefault();
+                        return false;
+                    });
+                    
+                    overlay.addEventListener('dragstart', function(e) {
+                        e.preventDefault();
+                        return false;
+                    });
+                });
+            }
+            
+            // Apply overlay protection
+            addProtectiveOverlay();
+
+            // 5. Detect developer tools and hide images
+            let devtoolsOpen = false;
+            const threshold = 160;
+            
+            function detectDevTools() {
+                if (window.outerHeight - window.innerHeight > threshold || 
+                    window.outerWidth - window.innerWidth > threshold) {
+                    if (!devtoolsOpen) {
+                        devtoolsOpen = true;
+                        hideImages();
+                        console.clear();
+                        console.log('%c🛡️ Image protection active', 'color: red; font-size: 20px; font-weight: bold;');
+                    }
+                } else {
+                    if (devtoolsOpen) {
+                        devtoolsOpen = false;
+                        showImages();
+                    }
+                }
+            }
+            
+            // Check for developer tools every second
+            setInterval(detectDevTools, 1000);
+
+            // 6. Disable long press on mobile devices
+            document.addEventListener('touchstart', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                }
+            }, {passive: false});
+            
+            document.addEventListener('touchend', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                }
+            }, {passive: false});
+
+            // 7. Add watermark overlay to images
+            function addWatermark() {
+                const aboutImages = document.querySelectorAll('.aarjavImg, .saraImg, .keeanaImg');
+                aboutImages.forEach(function(img) {
+                    const watermark = document.createElement('div');
+                    watermark.innerHTML = 'From Verses & Vibes';
+                    watermark.style.position = 'absolute';
+                    watermark.style.top = '50%';
+                    watermark.style.left = '50%';
+                    watermark.style.transform = 'translate(-50%, -50%) rotate(-45deg)';
+                    watermark.style.color = 'rgba(255, 255, 255, 0.3)';
+                    watermark.style.fontSize = '12px';
+                    watermark.style.fontWeight = 'bold';
+                    watermark.style.zIndex = '15';
+                    watermark.style.pointerEvents = 'none';
+                    watermark.style.userSelect = 'none';
+                    watermark.style.textShadow = '1px 1px 2px rgba(0,0,0,0.5)';
+                    
+                    const parent = img.parentElement;
+                    parent.appendChild(watermark);
+                });
+            }
+            
+            // Apply watermark
+            //addWatermark();
         </script>
     </body>
 </html>
