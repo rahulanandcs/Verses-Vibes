@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Not Found - Verses & Vibes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta charset="UTF-8">
+        <link rel="icon"  href="images/squareSimpleClipArtVersesAndVibesIcon.png">
+        <link rel="stylesheet" href="style2.css">
+        <script src="https://kit.fontawesome.com/c453ab086d.js" crossorigin="anonymous"></script>
+        <style>
+            .error-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 60vh;
+                text-align: center;
+                padding: 2rem;
+            }
+            
+            .error-number {
+                font-size: 120px;
+                font-family: 'PoppinsB', sans-serif;
+                color: #8B4513;
+                margin: 0;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            }
+            
+            .error-title {
+                font-size: 28px;
+                font-family: 'Nunito Sans', sans-serif;
+                font-weight: 950;
+                color: #5D4E37;
+                margin: 1rem 0;
+            }
+            
+            .error-message {
+                font-size: 18px;
+                font-family: 'Nunito Sans', sans-serif;
+                color: #6B4423;
+                max-width: 600px;
+                line-height: 1.6;
+                margin: 1rem 0 2rem 0;
+            }
+            
+            .error-actions {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .error-btn {
+                padding: 12px 24px;
+                border: none;
+                border-radius: 8px;
+                font-family: 'PoppinsM', sans-serif;
+                font-size: 16px;
+                cursor: pointer;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            .error-btn.primary {
+                background-color: #8B4513;
+                color: white;
+            }
+            
+            .error-btn.primary:hover {
+                background-color: #A0522D;
+                transform: translateY(-2px);
+            }
+            
+            .error-btn.secondary {
+                background-color: transparent;
+                color: #8B4513;
+                border: 2px solid #8B4513;
+            }
+            
+            .error-btn.secondary:hover {
+                background-color: #8B4513;
+                color: white;
+                transform: translateY(-2px);
+            }
+            
+            .error-illustration {
+                margin: 2rem 0;
+                opacity: 0.7;
+            }
+            
+            .error-illustration i {
+                font-size: 80px;
+                color: #8B4513;
+            }
+            
+            @media (max-width: 768px) {
+                .error-number {
+                    font-size: 80px;
+                }
+                
+                .error-title {
+                    font-size: 24px;
+                }
+                
+                .error-message {
+                    font-size: 16px;
+                }
+                
+                .error-actions {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .error-btn {
+                    width: 200px;
+                    justify-content: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div id="navbarRoot">
+                <nav id="navbar">
+                    <div id="nav-left">
+                    <a href="/">
+                        <img id="logo" src="images/croppedVersesAndVibesLogo1.png">
+                    </a>
+                    </div>
+                    <div id="otherPages">
+                        <a href="aboutus.html" rel="noopener noreferrer" class="navItems">
+                            About Us
+                        </a>
+                        <a href="poetry.html" rel="noopener noreferrer" class="navItems">
+                            Poetry Club
+                        </a>
+                        <a href="events.html" rel="noopener noreferrer" class="navItems">
+                           Events
+                        </a>
+                        <a href="gettinginvolved.html" rel="noopener noreferrer" class="navItems">
+                           Getting Involved
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="error-container">
+                <div class="error-number">404</div>
+                
+                <div class="error-illustration">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                
+                <h1 class="error-title">Oops! Page Not Found</h1>
+                
+                <p class="error-message">
+                    The page you're looking for seems to have wandered off like a lost verse. 
+                    Don't worry though - there's still plenty of poetry and community vibes to explore!
+                </p>
+                
+                <div class="error-actions">
+                    <a href="index.html" class="error-btn primary">
+                        <i class="fas fa-home"></i>
+                        Back to Home
+                    </a>
+                    <a href="poetry.html" class="error-btn secondary">
+                        <i class="fas fa-feather-alt"></i>
+                        Explore Poetry
+                    </a>
+                    <button onclick="goBack()" class="error-btn secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        Go Back
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <script>
+            function goBack() {
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'index.html';
+                }
+            }
+            
+            // Add some interactive animation
+            document.addEventListener('DOMContentLoaded', function() {
+                const errorNumber = document.querySelector('.error-number');
+                const illustration = document.querySelector('.error-illustration i');
+                
+                // Subtle bounce animation for the 404 number
+                errorNumber.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                errorNumber.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                });
+                
+                // Rotate animation for the book icon
+                illustration.addEventListener('mouseover', function() {
+                    this.style.transform = 'rotateY(180deg)';
+                    this.style.transition = 'transform 0.6s ease';
+                });
+                
+                illustration.addEventListener('mouseout', function() {
+                    this.style.transform = 'rotateY(0deg)';
+                });
+            });
+        </script>
+    </body>
+</html>
