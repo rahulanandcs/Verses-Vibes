@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsB';
+  src: url('fonts/Poppins-Bold.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsSB';
+  src: url('fonts/Poppins-SemiBold.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsM';
+  src: url('fonts/Poppins-Medium.ttf');
+  font-style: normal;
+}
+
+
+
 body{
     margin: 0;
     display: flex;
@@ -67,9 +90,8 @@ body #header {
 }
 .navItems{
     white-space: nowrap;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
     color: #fffdfa;
-    font-weight: bold;
     font-size: 1.2rem;
     cursor:pointer;
     text-decoration: none;
@@ -80,7 +102,7 @@ body #header {
     line-height: 1; 
 }
 .navItems:hover{
-    color: whitesmoke;
+    color: rgb(234, 229, 229);
     transition: color .4s ease;
 }
 
@@ -91,16 +113,16 @@ body #header {
     text-align: center;
     align-self: flex-start;
     font-size: 35px;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Nunito Sans', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+    font-weight:870;
 }
 
 
 
 .calendar-wrapper {
   max-width: 600px;
+  font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
   margin: 3em auto;
-  font-family: 'Gill Sans';
   text-align: center;
   background-color: #ddd;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -114,6 +136,7 @@ body #header {
   justify-content: space-between; /* centers items */
   align-items: center; /* fits the arrows */
   margin-bottom: 1em;
+  font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 .calendar-header h2 {
@@ -124,6 +147,7 @@ body #header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5em;
+  font-family:'PoppinsM', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 .day-label,
@@ -163,6 +187,7 @@ body #header {
   line-height: 1.5;
   animation: fadeIn 0.4s ease;
   text-align: left;
+  font-family:'PoppinsM', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 .hidden {
@@ -208,9 +233,7 @@ body #header {
 @media (max-width: 900px) {
 .navItems{
     white-space: nowrap;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #fffdfa;
-    font-weight: bold;
     font-size: 1rem;
     cursor:pointer;
     text-decoration: none;
