@@ -475,6 +475,7 @@ body #header {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: transform 0.2s;
+  font-family:"Times New Roman", Times, serif, 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 .poem-card:hover {
   transform: scale(1.02);
@@ -503,6 +504,7 @@ body #header {
   border-radius: 1em;
   position: relative;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  font-family:"Times New Roman", Times, serif, 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 .close-btn {
