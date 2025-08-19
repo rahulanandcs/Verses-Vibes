@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsB';
+  src: url('fonts/Poppins-Bold.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsSB';
+  src: url('fonts/Poppins-SemiBold.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsM';
+  src: url('fonts/Poppins-Medium.ttf');
+  font-style: normal;
+}
+
+
+
 body{
     margin: 0;
     display: flex;
@@ -67,9 +90,8 @@ body #header {
 }
 .navItems{
     white-space: nowrap;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
     color: #fffdfa;
-    font-weight: bold;
     font-size: 1.2rem;
     cursor:pointer;
     text-decoration: none;
@@ -80,7 +102,7 @@ body #header {
     line-height: 1; 
 }
 .navItems:hover{
-    color: whitesmoke;
+    color: rgb(234, 229, 229);
     transition: color .4s ease;
 }
 
@@ -91,8 +113,8 @@ body #header {
     text-align: center;
     align-self: flex-start;
     font-size: 35px;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Nunito Sans', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+    font-weight:950;
 }
 
 
@@ -114,7 +136,7 @@ body #header {
     width: 90%;
     color: black; 
     font-size: 1.3em; 
-    font-family: 'Gill Sans', serif;
+    font-family:'PoppinsM', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
     text-align: left;
     line-height: 1.5;
     padding-left: 2em;
@@ -143,7 +165,6 @@ body #header {
     box-shadow:
         2px 2px 8px rgba(0, 0, 0, 0.1),
         inset 0 0 0 1px #f8f1e9;
-    font-family: 'Gill Sans', sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     z-index: 1;
@@ -164,6 +185,7 @@ body #header {
     font-size: 1.4rem;
     color: #473c36;
     margin-bottom: 0.5rem;
+    font-family:'PoppinsB', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 .title{
     text-align: center;
@@ -173,6 +195,8 @@ body #header {
     color: #5a4a3c;
     line-height: 1.4;
     margin-bottom: -0.1rem;
+    font-family:'Nunito Sans', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+    font-weight: 600;
 }
 .bioImageContainer{     
     height: 300px;   
@@ -208,49 +232,6 @@ body #header {
         inset 0 0 0 1px #f8f1e9;
 }
 
-.bookCover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-color:rgba(27, 27, 27, 1);
-    border: 3px solid rgba(255, 255, 255, 0.155); 
-    box-sizing: border-box;
-    color: white;
-    font-family: 'Gill Sans', serif;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    transform-origin: left center;
-    animation: openOneCover 1.5s ease forwards;
-    box-shadow:
-        0 0 10px rgba(0, 0, 0, 0.4),
-        inset 0 0 10px rgba(255, 255, 255, 0.04),
-        0 4px 10px rgba(0, 0, 0, 0.6);
-    pointer-events: none;
-}
-
-@keyframes openOneCover {
-    0% 
-    {
-        transform: rotateY(0deg);
-    }
-    100% 
-    {
-        transform: rotateY(-150deg);
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-
 
 
 
@@ -282,9 +263,7 @@ body #header {
 @media (max-width: 900px) {
 .navItems{
     white-space: nowrap;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #fffdfa;
-    font-weight: bold;
     font-size: 1rem;
     cursor:pointer;
     text-decoration: none;
@@ -387,16 +366,6 @@ body #header {
     }
 }
 @media (max-width: 470px) {
-    #storyContainer 
-    {
-        width: 90vw;
-    }
-    #storyText
-    {
-        padding-left: 1em;
-        padding-top: 12vh;
-        padding-bottom: 12vh;
-    }
     .bioImageContainer{
         height: 230px;
     }
@@ -410,17 +379,70 @@ body #header {
         background-size: contain;      
         background-repeat: no-repeat;  
         background-size: 100% 100%;   /* center it */
-        padding: 1vw;                 /* creates spacing inside the frame */
         box-sizing: border-box;
     }
     #storyText{
         width: 72%;
         color: black; 
         font-size: 1.1em; 
-        font-family: 'Gill Sans', serif;
+        text-align: left;
+        line-height: 1.5;
+        padding-left: 2.9em;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+
+@media (max-width: 370px) {
+    .bioImageContainer{
+        height: 230px;
+    }
+    #storyContainer{
+        
+        position: relative;
+        width: 99.8%;        
+        max-width: 10000px;
+        margin-left: .1%;
+        margin-right: .1%;
+        background-size: contain;      
+        background-repeat: no-repeat;  
+        background-size: 100% 100%;   /* center it */
+        box-sizing: border-box;
+    }
+    #storyText{
+        width: 72%;
+        color: black; 
+        font-size: 1.1em; 
         text-align: left;
         line-height: 1.5;
         padding-left: 2.3em;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+}
+@media (max-width: 270px) {
+    .bioImageContainer{
+        height: 230px;
+    }
+    #storyContainer{
+        background-image: url('images/transCroppedWoodenFrame.png');
+        position: relative;
+        width: 99.8%;        
+        max-width: 10000px;
+        margin-left: .1%;
+        margin-right: .1%;
+        background-size: contain;      
+        background-repeat: no-repeat;  
+        background-size: 100% 100%;   /* center it */
+        box-sizing: border-box;
+    }
+    #storyText{
+        width: 72%;
+        color: black; 
+        font-size: 1.1em; 
+        text-align: left;
+        line-height: 1.5;
+        padding-left: 1.9em;
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
